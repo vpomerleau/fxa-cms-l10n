@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'locales/es-ES/cms.ftl'
+      - 'locales/es-AR/cms.ftl'
       - 'locales/fy-NL/cms.ftl'
       - 'locales/hi-IN/cms.ftl'
       - 'locales/pt-PT/cms.ftl'

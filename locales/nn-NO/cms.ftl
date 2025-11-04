@@ -4,6 +4,9 @@
 
 ## l10n-10 - Firefox Desktop Sync - App Menu (Hamburger)
 
+#another test
+test-test-more = Another test should not mirror
+
 # Description for Email First Page
 fxa-description-4ac18cac = Synkroniser passord, faner og bokmerke alle stadar du brukar Firefox.
 # Headline for Email First Page

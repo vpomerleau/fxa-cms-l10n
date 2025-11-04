@@ -4,6 +4,9 @@
 
 ## l10n-10 - Firefox Desktop Sync - App Menu (Hamburger)
 
+# test for mirroring
+test-test = Test string
+
 # Description for Email First Page
 fxa-description-4ac18cac = Sincronize as suas palavras-passe, separadores, marcadores, e muito mais em qualquer sítio em que utilize o Firefox.
 # Headline for Email First Page

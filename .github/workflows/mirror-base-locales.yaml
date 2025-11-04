@@ -3,11 +3,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'locales/es-ES/**'
-      - 'locales/fy-NL/**'
-      - 'locales/hi-IN/**'
-      - 'locales/pt-PT/**'
-      - 'locales/sv-SE/**'
+      - 'locales/es-ES/cms.ftl'
+      - 'locales/fy-NL/cms.ftl'
+      - 'locales/hi-IN/cms.ftl'
+      - 'locales/pt-PT/cms.ftl'
+      - 'locales/sv-SE/cms.ftl'
   workflow_dispatch:
 
 permissions:
@@ -17,11 +17,10 @@ jobs:
   copy_locale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Mirror region → base
         run: |
-          set -euo pipefail
           pairs="es:es-ES fy:fy-NL hi:hi-IN pt:pt-PT sv:sv-SE"
           changed=0
           for pair in $pairs; do
@@ -39,7 +38,7 @@ jobs:
           if [ "$changed" -eq 1 ]; then
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "chore(l10n): mirror region locales → base"
+            git commit -m "Automation: mirror region locales to base locales"
             git push
           else
             echo "No changes found."
